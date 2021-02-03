@@ -25,7 +25,7 @@ url                      : "https://nahyeon-an.github.io"
 baseurl                  : ""
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbRFs7h%2FbtqVK9fSWxk%2Fmauj1cBzY4bhWsZUEKd1u1%2Fimg.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -93,9 +93,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "nahyeon"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Welcom, aboard ! This is all of my **development** diary."
+  name             : "ama"
+  avatar           : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F55Bp0%2FbtqVIKVdI9m%2FWNGyw6b4clvSVJ71TZVna0%2Fimg.jpg"
+  bio              : "Welcome, aboard ! This is all of my **development** diary."
   location         : "Seoul"
   email            :
   links:
@@ -113,7 +113,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/nahyeon-an"
+      url: "https://github.com/nahyeon-an"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
