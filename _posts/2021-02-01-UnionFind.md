@@ -20,7 +20,7 @@ categories: update
     같은 집합의 원소들끼리 트리를 구성 = 트리들의 집합  
     모든 노드는 부모에 대한 포인터만 가지면 됨  
     (루트노드의 경우 자기 자신을 가리킴)    
-    각 노드를 <span style="color:#c55f4e">*1차원 배열*</span>로 표현 (자신의 부모 번호를 저장)  
+    각 노드를 <span style="color:#c55f4e">1차원 배열</span>로 표현 (자신의 부모 번호를 저장)  
     **union** : 각 트리의 루트를 찾아, 하나를 다른 한 쪽의 자손으로 이동시킴, O(트리의 높이)  
     **find** : 각 원소가 포함된 트리의 루트를 찾아 비교, O(트리의 높이)  
 
@@ -34,9 +34,10 @@ categories: update
 
 
 ### 최적화 1 : 랭크에 의한 합치기 (Union by Rank)
- <span style="color:#ca8462">*: 높이가 더 낮은 트리를 더 높은 트리 밑에 합침*</span>  
- 1차원 배열 <span style="color:#c55f4e">*rank[]*</span> = 루트 노드인 경우 해당 트리의 높이를 저장하는 배열  
- <span style="color:#c55f4e">*두 트리의 높이가 같은 경우 합친 결과 트리의 높이를 +1*</span>    
+ <span style="color:#ca8462">: 높이가 더 낮은 트리를 더 높은 트리 밑에 합침</span>  
+
+ 1차원 배열 <span style="color:#c55f4e">rank[]</span> = 루트 노드인 경우 해당 트리의 높이를 저장하는 배열  
+ <span style="color:#c55f4e">두 트리의 높이가 같은 경우 합친 결과 트리의 높이를 +1</span>    
  union, find 연산의 시간 복잡도 = O(lgN)  
 
 트리가 한쪽으로 기울어질 수 있다는 문제를 해결  
