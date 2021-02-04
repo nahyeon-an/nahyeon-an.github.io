@@ -1,7 +1,7 @@
 ---
 title: "[Graph Algorithm] Union-Find"
 date: 2021-02-01 18:30:28 -0400
-categories: update
+categories: algorithm
 ---
 
 ### Union-Find
