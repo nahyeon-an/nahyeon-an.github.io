@@ -17,6 +17,10 @@ Edge들을 모두 담는 배열 edgeList 생성
 음수 사이클 확인 필수  
 INF 값을 가장 긴 경로의 가중치보다 크도록 *잘* 설정해야 함 (실제로 INF값 때문에 값이 이상하게 저장된 경우가 있었다..)  
 
+### Example
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbEW58d%2FbtqV08pCqRT%2FQXBXD12j0Bvtyd0chifwe0%2Fimg.jpg" />
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRVied%2FbtqWjo5mtUv%2Ft7d9ESSkVP0zjWjF1AuA3K%2Fimg.jpg">
+
 ### Pseudo-code
 ```
 dist[ |V| ] = INF
