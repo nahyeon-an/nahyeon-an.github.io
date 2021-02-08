@@ -2,7 +2,7 @@
 title: "[Graph Algorithm] Bellman-Ford 최단경로 찾기"
 date: 2021-02-02 19:17:48 -0400
 categories: algorithm
-tags: graph, shortest path
+tags: graph shortest-path
 ---
 
 ### 벨만-포드 최단 경로 알고리즘
