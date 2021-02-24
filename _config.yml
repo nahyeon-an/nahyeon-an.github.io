@@ -97,7 +97,7 @@ author:
   avatar           : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F55Bp0%2FbtqVIKVdI9m%2FWNGyw6b4clvSVJ71TZVna0%2Fimg.jpg"
   bio              : "Welcome, aboard ! This is all of my **development** diary."
   location         : "Seoul"
-  email            : "skgus923@gmail.com"
+  # email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
