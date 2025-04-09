@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "[Hadoop] 하둡 바이너리"  
 date: 2022-05-01 10:36 +0000
 categories: hadoop

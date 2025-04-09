@@ -2,44 +2,59 @@
 layout: default
 ---
 
-{% include home-header.html %}
-
-<div class="posts">
+<h1>Recent Posts</h1>
+<ul>
   {% for post in paginator.posts %}
-  <section class="post-entry">
-    <h2 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-
-    <div class="post-meta">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-      {%- if jekyll.environment == "production" and site.disqus -%}
-        <span> • </span>
-        <a class="comment-count" href="{{ post.url | relative_url }}#disqus_thread">
-          <span class="disqus-comment-count" data-disqus-url="{{ post.url | absolute_url }}"></span>
-        </a>
-      {%- endif -%}
-    </div>
-
-    <p>{{ post.excerpt | strip_html }}</p>
-  </section>
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
   {% endfor %}
-  {%- if jekyll.environment == "production" and site.disqus -%}
-    <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
-  {%- endif -%}
-</div>
+</ul>
 
 <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <a href="{{ paginator.previous_page_path }}">&laquo; Previous</a>
+  {% endif %}
+
+  {% assign total_pages = paginator.total_pages %}
+  {% assign current_page = paginator.page %}
+
+  {% assign delta = 2 %}
+  {% assign left = current_page | minus: delta %}
+  {% assign right = current_page | plus: delta %}
+
+  {% if left < 1 %}
+    {% assign left = 1 %}
+  {% endif %}
+  {% if right > total_pages %}
+    {% assign right = total_pages %}
+  {% endif %}
+
+  {% if left > 1 %}
+    <a class="page" href="/">1</a>
+    {% if left > 2 %}
+      <span class="ellipsis">…</span>
+    {% endif %}
+  {% endif %}
+
+  {% for i in (left..right) %}
+    {% if i == current_page %}
+      <span class="page current">{{ i }}</span>
+    {% else %}
+      <a class="page" href="{% if i == 1 %}/{% else %}/page/{{ i }}/{% endif %}">{{ i }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if right < total_pages %}
+    {% assign last_page = total_pages | minus: 1 %}
+    {% if right < last_page %}
+      <span class="ellipsis">…</span>
+    {% endif %}
+    <a class="page" href="/page/{{ total_pages }}/">{{ total_pages }}</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">Next &raquo;</a>
   {% endif %}
 </div>

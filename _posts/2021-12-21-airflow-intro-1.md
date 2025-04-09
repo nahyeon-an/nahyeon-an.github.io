@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "[Airflow] Docker를 이용한 로컬 에어플로우 실행과 DAG 등록 - (1)"  
 date: 2021-12-21 01:45 +0000
 categories: airflow

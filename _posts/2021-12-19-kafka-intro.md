@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "[Kafka] Basic Concepts"
 date: 2021-12-18 10:41:22 -0400
 categories: kafka

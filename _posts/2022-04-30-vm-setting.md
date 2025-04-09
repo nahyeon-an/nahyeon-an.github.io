@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "[Linux] Virtual Box 사용하면서 배우는 지식들"  
 date: 2022-04-30 04:24 +0000
 categories: linux
